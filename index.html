@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazedor de Escala</title>
+</head>
+<body>
+    <!-- Escalador Automático:
+        Funcionalidades:
+
+        Nomes dos escalados a serem preenchido - originalmente preenchido com
+        A, B, C, D, etc.
+
+        Número variável de participantes;
+
+        Inclusão de datas desfavoráveis;
+        Inclusão de períodos excludentes (férias, LP, licenças)
+        Equilíbrio de fins de semana;
+        Opção para esticar férias;
+
+        Regras (desligáveis?):
+
+        Pelo menos 48h de folga;
+        Observar mês anterior;
+
+
+        Ideia:
+        ponderador de pontos: Cada indivíduo tem uma pontuação para cada dia;
+        as pontuações são feitas a partir dos dias anteriores e regras preenchidas.
+    
+    -->
+    <p id="expoe">
+
+
+    </p>
+    <script>
+        let membrosEquipe = ["A","B","C","D","E","F","G"];
+        let escala = [];
+
+        for (var i=0; i<=7; i++){
+            escala.push(membrosEquipe[i]);
+        }
+        console.log (escala);
+
+    </script>
+</body>
+</html>
