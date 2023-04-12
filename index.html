@@ -31,16 +31,35 @@
         as pontuações são feitas a partir dos dias anteriores e regras preenchidas.
     
     -->
+    <form action="">
+        <label for="nome1">Membros da Equipe:</label>
+        <input type="text" id="nome1" name="Nome">
+        
+        <input type="submit" value="Criar Escala">
+        
+    </form>
+
     <p id="expoe">
 
 
     </p>
     <script>
         let membrosEquipe = ["A","B","C","D","E","F","G"];
+        
+        let pontosME = [0,0,0,0,0,0,0];
+        
         let escala = [];
 
-        for (var i=0; i<=7; i++){
-            escala.push(membrosEquipe[i]);
+        let diasMes = 30;
+        
+        for (var i=0; i<=diasMes; i++){
+            
+            let membroMaiorPonto = pontosME.indexOf(Math.max(...pontosME));
+            
+            escala.push(membrosEquipe[membroMaiorPonto]);
+
+            pontosME[membroMaiorPonto] = pontosME[membroMaiorPonto] - 10;
+
         }
         console.log (escala);
 
